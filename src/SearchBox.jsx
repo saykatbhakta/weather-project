@@ -16,7 +16,7 @@ export default function SearchBox({ infoWeather }) {
 	let getWeatherInfo = async () => {
 		try {
 			let res = await fetch(
-				`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`
+				`${API_URL}?q=${city}&APPID=${API_KEY}&units=metric`
 			);
 			let resJson = await res.json();
 			console.log(resJson);
@@ -47,7 +47,7 @@ export default function SearchBox({ infoWeather }) {
 			];
 			let cityName = citys[Math.floor(Math.random() * 5)];
 			let res = await fetch(
-				`${API_URL}?q=${cityName}&appid=${API_KEY}&units=metric`
+				`${API_URL}?q=${cityName}&APPID=${API_KEY}&units=metric`
 			);
 			let resJson = await res.json();
 			console.log(resJson);
