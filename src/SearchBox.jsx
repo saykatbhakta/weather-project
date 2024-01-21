@@ -7,8 +7,11 @@ import { useEffect,useState } from "react";
 // const API_KEY = process.env.API_KEY;
 // const API_KEY = process.env.API_KEY;  
 
-const API_URL = import.meta.env.VITE_API_URL;
-const API_KEY = import.meta.env.VITE_API_KEY;
+// const API_URL = import.meta.env.VITE_API_URL;
+// const API_KEY = import.meta.env.VITE_API_KEY;
+
+const API_URL = "http://api.openweathermap.org/data/2.5/weather";
+const API_KEY = "d3608c1f307fae7f9e01b00027657a1a";
 
 export default function SearchBox({ infoWeather }) {
 	let [city, setCity] = useState("") 
