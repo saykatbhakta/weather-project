@@ -12,19 +12,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
-  display: flex;
-  margin: 0px;
-  padding: 0px .5rem;
-  justify-content: center;
-  text-align: center;
-  background-image: url("../src/assets/weather02.jpg");
-  color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-
-
 }
 
 a {

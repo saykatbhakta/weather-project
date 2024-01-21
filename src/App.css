@@ -1,9 +1,9 @@
-/* #root {
+#root {
   display: flex;
   margin: 0px auto;
   padding: 0px .5rem;
   justify-content: center;
-  background-image: url("../src/assets/weather01.jpg");
+  background-image: url("../src/assets/weather02.jpg");
   color: white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,4 +14,4 @@ body{
   margin: 0px;
   width: 100vw;
   height: 100vh;
-} */
+}
