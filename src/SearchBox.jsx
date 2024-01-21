@@ -2,7 +2,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import "./SearchBox.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // const API_KEY = process.env.API_KEY;
 // const API_KEY = process.env.API_KEY;  
@@ -36,34 +36,34 @@ export default function SearchBox({ infoWeather }) {
 			throw error;
 		}
 	};
-	useEffect(() => {
-		let mumbaiWeather = async () => {
-			let citys = [
-				"MUMBAI",
-				"ANTARCTICA",
-				"GREENLAND",
-				"RACHI",
-				"KOLKATA",
-			];
-			let cityName = citys[Math.floor(Math.random() * 5)];
-			let res = await fetch(
-				`${API_URL}?q=${cityName}&appid=${API_KEY}&units=metric`
-			);
-			let resJson = await res.json();
-			console.log(resJson);
-			let result = {
-				city: cityName,
-				feelsLike: resJson.main.feels_like,
-				humidity: resJson.main.humidity,
-				temp: resJson.main.temp,
-				tempMax: resJson.main.temp_max,
-				tempMin: resJson.main.temp_min,
-				weather: resJson.weather[0].description,
-			};
-			infoWeather(result);
-		};
-		mumbaiWeather();
-	}, []);
+	// useEffect(() => {
+	// 	let mumbaiWeather = async () => {
+	// 		let citys = [
+	// 			"MUMBAI",
+	// 			"ANTARCTICA",
+	// 			"GREENLAND",
+	// 			"RACHI",
+	// 			"KOLKATA",
+	// 		];
+	// 		let cityName = citys[Math.floor(Math.random() * 5)];
+	// 		let res = await fetch(
+	// 			`${API_URL}?q=${cityName}&appid=${API_KEY}&units=metric`
+	// 		);
+	// 		let resJson = await res.json();
+	// 		console.log(resJson);
+	// 		let result = {
+	// 			city: cityName,
+	// 			feelsLike: resJson.main.feels_like,
+	// 			humidity: resJson.main.humidity,
+	// 			temp: resJson.main.temp,
+	// 			tempMax: resJson.main.temp_max,
+	// 			tempMin: resJson.main.temp_min,
+	// 			weather: resJson.weather[0].description,
+	// 		};
+	// 		infoWeather(result);
+	// 	};
+	// 	mumbaiWeather();
+	// }, []);
 	let handleChange = (ent) => {
 		setCity(ent.target.value);
 	};
