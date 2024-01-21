@@ -6,13 +6,13 @@ import '@fontsource/roboto/500.css';
 
 export default function WeatherApp() {
     const [weatherInfo, setWeatherInfo] = useState({
-        city: "DELHI",
-		feelsLike: 24.48,
-		temp: 34.43,
-		tempMin: 34.04,
-		tempMax: 25.94,
-		humidity: 43,
-		weather: "haze",
+        // city: "DELHI",
+		// feelsLike: 24.48,
+		// temp: 34.43,
+		// tempMin: 34.04,
+		// tempMax: 25.94,
+		// humidity: 43,
+		// weather: "haze",
     });
     let infoWeather = (infoWeather) => {
         setWeatherInfo(infoWeather);
