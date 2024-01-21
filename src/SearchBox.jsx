@@ -4,14 +4,14 @@ import SendIcon from "@mui/icons-material/Send";
 import "./SearchBox.css";
 import { useEffect, useState } from "react";
 
-// const API_URL = process.env.REACT_API_URL;
-// const API_KEY = process.env.REACT_API_KEY;
+// const API_KEY = process.env.API_KEY;
+// const API_KEY = process.env.API_KEY;  
 
 const API_URL = import.meta.env.VITE_API_URL;
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function SearchBox({ infoWeather }) {
-	let [city, setCity] = useState("");
+	let [city, setCity] = useState("") 
 	let [error, setError] = useState(false);
 	let getWeatherInfo = async () => {
 		try {
@@ -39,12 +39,11 @@ export default function SearchBox({ infoWeather }) {
 	useEffect(() => {
 		let mumbaiWeather = async () => {
 			let citys = [
-				"KOLKATA",
+				"MUMBAI",
 				"ANTARCTICA",
-				"SWITZERLAND",
-				"BENGALURU",
-                "MUMBAI"
-				,
+				"GREENLAND",
+				"RACHI",
+				"KOLKATA",
 			];
 			let cityName = citys[Math.floor(Math.random() * 5)];
 			let res = await fetch(
